@@ -5,7 +5,12 @@ import cv2
 import sys
 
 def deal_stream():
-	cap = cv2.VideoCapture(0)
+
+        # modify by jason 2019.07.11
+        #cap = cv2.VideoCapture(0)
+        cap = cv2.VideoCapture("rtsp://admin:admin@192.168.1.2:8554/live")
+        # end modify
+
 	# cap = cv2.VideoCapture("rtsp://admin:s65656645@172.16.1.29/cam/realmonitor?channel=1&subtype=0")
 	# 打印视频相关参数，帧率，宽高
 	if cap.isOpened():
